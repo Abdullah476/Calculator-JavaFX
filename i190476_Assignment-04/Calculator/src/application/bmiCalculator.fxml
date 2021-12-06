@@ -1,0 +1,300 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.SplitPane?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<VBox maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="450.0" prefWidth="300.0" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.bmiCalculatorController">
+   <children>
+      <HBox prefHeight="50.0" prefWidth="300.0">
+         <children>
+            <Button mnemonicParsing="false" onAction="#handleClickBack" text="&lt;">
+               <HBox.margin>
+                  <Insets left="10.0" top="10.0" />
+               </HBox.margin>
+               <font>
+                  <Font name="System Bold" size="14.0" />
+               </font>
+            </Button>
+            <Text strokeType="OUTSIDE" strokeWidth="0.0" text="BMI">
+               <HBox.margin>
+                  <Insets left="100.0" top="12.0" />
+               </HBox.margin>
+               <font>
+                  <Font name="System Bold" size="18.0" />
+               </font>
+            </Text>
+         </children>
+      </HBox>
+      <VBox prefHeight="200.0" prefWidth="300.0">
+         <children>
+            <HBox prefHeight="70.0" prefWidth="300.0">
+               <children>
+                  <Label prefHeight="25.0" prefWidth="60.0" text="Weight:">
+                     <HBox.margin>
+                        <Insets left="30.0" top="35.0" />
+                     </HBox.margin>
+                     <font>
+                        <Font size="16.0" />
+                     </font>
+                  </Label>
+                  <TextField fx:id="weight" alignment="CENTER_RIGHT" onMouseClicked="#handleWeightClick" promptText="Enter Weight">
+                     <HBox.margin>
+                        <Insets left="25.0" top="37.0" />
+                     </HBox.margin>
+                  </TextField>
+                  <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Kgs">
+                     <HBox.margin>
+                        <Insets left="5.0" top="42.0" />
+                     </HBox.margin>
+                  </Text>
+               </children></HBox>
+            <HBox prefHeight="40.0" prefWidth="300.0">
+               <children>
+                  <Label prefHeight="25.0" prefWidth="60.0" text="Height:">
+                     <font>
+                        <Font size="16.0" />
+                     </font>
+                     <HBox.margin>
+                        <Insets left="30.0" />
+                     </HBox.margin>
+                  </Label>
+                  <TextField fx:id="height" alignment="CENTER_RIGHT" onMouseClicked="#handleHeightClick" promptText="Enter Height">
+                     <HBox.margin>
+                        <Insets left="25.0" top="2.0" />
+                     </HBox.margin>
+                  </TextField>
+                  <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Cms">
+                     <HBox.margin>
+                        <Insets left="5.0" top="5.0" />
+                     </HBox.margin>
+                  </Text>
+               </children></HBox>
+            <HBox prefHeight="40.0" prefWidth="300.0">
+               <children>
+                  <Label prefHeight="25.0" prefWidth="60.0" text="BMI:">
+                     <font>
+                        <Font size="16.0" />
+                     </font>
+                     <HBox.margin>
+                        <Insets left="30.0" />
+                     </HBox.margin>
+                  </Label>
+                  <Label fx:id="bmi">
+                     <HBox.margin>
+                        <Insets left="25.0" />
+                     </HBox.margin>
+                     <font>
+                        <Font size="16.0" />
+                     </font>
+                  </Label>
+               </children>
+            </HBox>
+            <HBox prefHeight="50.0" prefWidth="300.0">
+               <children>
+                  <VBox prefHeight="200.0" prefWidth="100.0">
+                     <children>
+                        <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Underweight">
+                           <VBox.margin>
+                              <Insets left="20.0" />
+                           </VBox.margin>
+                        </Text>
+                        <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Less than 18.5">
+                           <VBox.margin>
+                              <Insets left="15.0" top="7.0" />
+                           </VBox.margin>
+                        </Text>
+                     </children>
+                  </VBox>
+                  <VBox prefHeight="200.0" prefWidth="100.0">
+                     <children>
+                        <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Normal">
+                           <VBox.margin>
+                              <Insets left="25.0" />
+                           </VBox.margin>
+                        </Text>
+                        <Text strokeType="OUTSIDE" strokeWidth="0.0" text="18.5 - 25.0">
+                           <VBox.margin>
+                              <Insets left="20.0" top="7.0" />
+                           </VBox.margin>
+                        </Text>
+                     </children>
+                  </VBox>
+                  <VBox prefHeight="200.0" prefWidth="100.0">
+                     <children>
+                        <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Overweight">
+                           <VBox.margin>
+                              <Insets left="15.0" />
+                           </VBox.margin>
+                        </Text>
+                        <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Greater than 25.0">
+                           <VBox.margin>
+                              <Insets top="7.0" />
+                           </VBox.margin>
+                        </Text>
+                     </children>
+                  </VBox>
+               </children>
+            </HBox>
+         </children>
+      </VBox>
+      <SplitPane dividerPositions="0.5" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="200.0" prefWidth="300.0">
+         <items>
+            <VBox maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="200.0" prefWidth="225.0">
+               <children>
+                  <HBox prefHeight="50.0" prefWidth="200.0">
+                     <children>
+                        <Button mnemonicParsing="false" onAction="#handleNumberClick" prefHeight="30.0" prefWidth="50.0" text="7">
+                           <HBox.margin>
+                              <Insets left="25.0" top="10.0" />
+                           </HBox.margin>
+                           <font>
+                              <Font size="14.0" />
+                           </font>
+                        </Button>
+                        <Button mnemonicParsing="false" onAction="#handleNumberClick" prefHeight="30.0" prefWidth="50.0" text="8">
+                           <HBox.margin>
+                              <Insets left="10.0" top="10.0" />
+                           </HBox.margin>
+                           <font>
+                              <Font size="14.0" />
+                           </font>
+                        </Button>
+                        <Button mnemonicParsing="false" onAction="#handleNumberClick" prefHeight="30.0" prefWidth="50.0" text="9">
+                           <HBox.margin>
+                              <Insets left="10.0" top="10.0" />
+                           </HBox.margin>
+                           <font>
+                              <Font size="14.0" />
+                           </font>
+                        </Button>
+                     </children>
+                  </HBox>
+                  <HBox prefHeight="50.0" prefWidth="200.0">
+                     <children>
+                        <Button mnemonicParsing="false" onAction="#handleNumberClick" prefHeight="30.0" prefWidth="50.0" text="4">
+                           <HBox.margin>
+                              <Insets left="25.0" top="10.0" />
+                           </HBox.margin>
+                           <font>
+                              <Font size="14.0" />
+                           </font>
+                        </Button>
+                        <Button mnemonicParsing="false" onAction="#handleNumberClick" prefHeight="30.0" prefWidth="50.0" text="5">
+                           <HBox.margin>
+                              <Insets left="10.0" top="10.0" />
+                           </HBox.margin>
+                           <font>
+                              <Font size="14.0" />
+                           </font>
+                        </Button>
+                        <Button mnemonicParsing="false" onAction="#handleNumberClick" prefHeight="30.0" prefWidth="50.0" text="6">
+                           <HBox.margin>
+                              <Insets left="10.0" top="10.0" />
+                           </HBox.margin>
+                           <font>
+                              <Font size="14.0" />
+                           </font>
+                        </Button>
+                     </children>
+                  </HBox>
+                  <HBox prefHeight="50.0" prefWidth="200.0">
+                     <children>
+                        <Button mnemonicParsing="false" onAction="#handleNumberClick" prefHeight="30.0" prefWidth="50.0" text="1">
+                           <HBox.margin>
+                              <Insets left="25.0" top="10.0" />
+                           </HBox.margin>
+                           <font>
+                              <Font size="14.0" />
+                           </font>
+                        </Button>
+                        <Button mnemonicParsing="false" onAction="#handleNumberClick" prefHeight="30.0" prefWidth="50.0" text="2">
+                           <HBox.margin>
+                              <Insets left="10.0" top="10.0" />
+                           </HBox.margin>
+                           <font>
+                              <Font size="14.0" />
+                           </font>
+                        </Button>
+                        <Button mnemonicParsing="false" onAction="#handleNumberClick" prefHeight="30.0" prefWidth="50.0" text="3">
+                           <HBox.margin>
+                              <Insets left="10.0" top="10.0" />
+                           </HBox.margin>
+                           <font>
+                              <Font size="14.0" />
+                           </font>
+                        </Button>
+                     </children>
+                  </HBox>
+                  <HBox prefHeight="50.0" prefWidth="200.0">
+                     <children>
+                        <Button mnemonicParsing="false" onAction="#handleNumberClick" prefHeight="30.0" prefWidth="50.0" text="0">
+                           <HBox.margin>
+                              <Insets left="85.0" top="10.0" />
+                           </HBox.margin>
+                           <font>
+                              <Font size="14.0" />
+                           </font>
+                        </Button>
+                        <Button mnemonicParsing="false" onAction="#handleNumberClick" prefHeight="30.0" prefWidth="50.0" text=".">
+                           <HBox.margin>
+                              <Insets left="10.0" top="10.0" />
+                           </HBox.margin>
+                           <font>
+                              <Font size="14.0" />
+                           </font>
+                        </Button>
+                     </children>
+                  </HBox>
+               </children>
+            </VBox>
+            <VBox minHeight="-Infinity" minWidth="-Infinity" prefHeight="200.0" prefWidth="75.0">
+               <children>
+                  <HBox prefHeight="70.0" prefWidth="100.0">
+                     <children>
+                        <Button mnemonicParsing="false" onAction="#handleClickClearAll" prefHeight="75.0" prefWidth="55.0" style="-fx-background-color: darkorange;" text="AC" textFill="WHITE">
+                           <HBox.margin>
+                              <Insets left="10.0" top="10.0" />
+                           </HBox.margin>
+                           <font>
+                              <Font size="18.0" />
+                           </font>
+                        </Button>
+                     </children>
+                  </HBox>
+                  <HBox prefHeight="70.0" prefWidth="100.0">
+                     <children>
+                        <Button mnemonicParsing="false" onAction="#handleClickClear" prefHeight="75.0" prefWidth="55.0" style="-fx-background-color: darkorange;" text="C" textFill="WHITE">
+                           <HBox.margin>
+                              <Insets left="10.0" top="10.0" />
+                           </HBox.margin>
+                           <font>
+                              <Font size="18.0" />
+                           </font>
+                        </Button>
+                     </children>
+                  </HBox>
+                  <HBox prefHeight="60.0" prefWidth="100.0">
+                     <children>
+                        <Button mnemonicParsing="false" onAction="#hanadleClickGo" prefHeight="40.0" prefWidth="55.0" style="-fx-background-color: darkorange;" text="Go" textFill="#f8f8f8">
+                           <HBox.margin>
+                              <Insets left="10.0" top="10.0" />
+                           </HBox.margin>
+                           <font>
+                              <Font size="18.0" />
+                           </font>
+                        </Button>
+                     </children>
+                  </HBox>
+               </children>
+            </VBox>
+         </items>
+      </SplitPane>
+   </children>
+</VBox>

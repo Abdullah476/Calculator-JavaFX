@@ -1,0 +1,174 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<VBox maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="450.0" prefWidth="300.0" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.investmentCalculatorController">
+   <children>
+      <HBox prefHeight="50.0" prefWidth="300.0">
+         <children>
+            <Button mnemonicParsing="false" onAction="#handleClickBack" text="&lt;">
+               <HBox.margin>
+                  <Insets left="10.0" top="10.0" />
+               </HBox.margin>
+               <font>
+                  <Font name="System Bold" size="14.0" />
+               </font>
+            </Button>
+            <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Investment calculator">
+               <HBox.margin>
+                  <Insets left="40.0" top="12.0" />
+               </HBox.margin>
+               <font>
+                  <Font name="System Bold" size="18.0" />
+               </font>
+            </Text>
+         </children>
+      </HBox>
+      <VBox prefHeight="200.0" prefWidth="300.0">
+         <children>
+            <HBox prefHeight="50.0" prefWidth="300.0">
+               <children>
+                  <Label text="Total Investment">
+                     <HBox.margin>
+                        <Insets left="25.0" top="15.0" />
+                     </HBox.margin>
+                     <font>
+                        <Font name="Arial" size="14.0" />
+                     </font>
+                  </Label>
+                  <TextField fx:id="investment" alignment="CENTER" prefHeight="30.0" prefWidth="125.0" promptText="Enter Amount">
+                     <HBox.margin>
+                        <Insets left="36.0" top="10.0" />
+                     </HBox.margin>
+                     <font>
+                        <Font size="14.0" />
+                     </font>
+                  </TextField>
+               </children></HBox>
+            <HBox prefHeight="50.0" prefWidth="300.0">
+               <children>
+                  <Label text="Interest (percentage)">
+                     <HBox.margin>
+                        <Insets left="25.0" top="15.0" />
+                     </HBox.margin>
+                     <font>
+                        <Font name="Arial" size="14.0" />
+                     </font>
+                  </Label>
+                  <TextField fx:id="annualRate" alignment="CENTER" prefHeight="30.0" prefWidth="125.0" promptText="Enter Annual Rate">
+                     <HBox.margin>
+                        <Insets left="10.0" top="10.0" />
+                     </HBox.margin>
+                     <font>
+                        <Font size="14.0" />
+                     </font>
+                  </TextField>
+               </children>
+            </HBox>
+            <HBox prefHeight="50.0" prefWidth="300.0">
+               <children>
+                  <Label text="Duration">
+                     <HBox.margin>
+                        <Insets left="120.0" top="15.0" />
+                     </HBox.margin>
+                     <font>
+                        <Font name="Arial" size="14.0" />
+                     </font>
+                  </Label>
+               </children>
+            </HBox>
+            <HBox prefHeight="50.0" prefWidth="300.0">
+               <children>
+                  <VBox prefHeight="50.0" prefWidth="150.0">
+                     <children>
+                        <Label text="Years">
+                           <font>
+                              <Font name="Arial" size="14.0" />
+                           </font>
+                           <VBox.margin>
+                              <Insets left="50.0" />
+                           </VBox.margin>
+                        </Label>
+                        <TextField fx:id="years" alignment="CENTER" maxHeight="-Infinity" maxWidth="-Infinity" prefHeight="25.0" prefWidth="120.0" promptText="Enter Years">
+                           <VBox.margin>
+                              <Insets left="15.0" />
+                           </VBox.margin>
+                           <font>
+                              <Font size="14.0" />
+                           </font>
+                        </TextField>
+                     </children>
+                  </VBox>
+                  <VBox prefHeight="50.0" prefWidth="150.0">
+                     <children>
+                        <Label text="Months">
+                           <font>
+                              <Font name="Arial" size="14.0" />
+                           </font>
+                           <VBox.margin>
+                              <Insets left="50.0" />
+                           </VBox.margin>
+                        </Label>
+                        <TextField fx:id="months" alignment="CENTER" maxHeight="-Infinity" maxWidth="-Infinity" prefHeight="25.0" prefWidth="120.0" promptText="Enter Months">
+                           <VBox.margin>
+                              <Insets left="15.0" />
+                           </VBox.margin>
+                           <font>
+                              <Font size="14.0" />
+                           </font>
+                        </TextField>
+                     </children>
+                  </VBox>
+               </children>
+            </HBox>
+         </children>
+      </VBox>
+      <VBox prefHeight="200.0" prefWidth="300.0">
+         <children>
+            <HBox prefHeight="70.0" prefWidth="200.0">
+               <children>
+                  <Label alignment="CENTER" text="Total value">
+                     <font>
+                        <Font name="Arial" size="16.0" />
+                     </font>
+                     <HBox.margin>
+                        <Insets left="30.0" top="20.0" />
+                     </HBox.margin>
+                  </Label>
+                  <Label fx:id="finalValue" alignment="CENTER" prefHeight="25.0" prefWidth="120.0">
+                     <font>
+                        <Font name="Arial" size="16.0" />
+                     </font>
+                     <HBox.margin>
+                        <Insets left="30.0" top="17.0" />
+                     </HBox.margin>
+                  </Label>
+               </children>
+            </HBox>
+            <Button mnemonicParsing="false" onAction="#handleCalculate" prefHeight="65.0" prefWidth="160.0" style="-fx-background-color: darkorange;" text="Calculate" textFill="WHITE">
+               <font>
+                  <Font size="24.0" />
+               </font>
+               <VBox.margin>
+                  <Insets left="75.0" top="5.0" />
+               </VBox.margin>
+            </Button>
+            <Label fx:id="error" alignment="CENTER" prefHeight="40.0" prefWidth="300.0" textFill="RED">
+               <font>
+                  <Font size="16.0" />
+               </font>
+               <VBox.margin>
+                  <Insets top="10.0" />
+               </VBox.margin>
+            </Label>
+         </children>
+      </VBox>
+   </children>
+</VBox>
